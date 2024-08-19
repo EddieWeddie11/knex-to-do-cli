@@ -11,3 +11,8 @@ export function getTodos() {
 export function close() {
   db.destroy()
 }
+
+// deletes a task
+export async function deleteTask() {
+  return await db('todos').where({ id: 1 }).delete()
+}
